@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package server;
+
+service Base {
+    rpc SearchByAuthor(RequestByAuthor) returns (Response) {}
+    rpc SearchByBook(RequestByBook) returns (Response) {}
+}
+
+message RequestByAuthor {
+    bool like = 1;
+    string name = 2;
+}
+
+message RequestByBook {
+    bool like = 1;
+    string title = 2;
+}
+
+message Response {
+    string answer = 1;
+}

@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  mariadb:
+    image: 'bitnami/mariadb:latest'
+    environment:
+      - MARIADB_ROOT_PASSWORD=myPassWord
+    ports:
+      - '3307:3306'
+    volumes:
+      - /home/lin/Документы/go/bookservice/databases/mysql:/bitnami
